@@ -34,7 +34,7 @@ Proxmox is a powerful open-source virtualization platform that can manage virtua
    
    -Name: Enter a name for your VM (e.g., Windows-Server-AD).
    
-   -OS: Select the correct ISO image (Windows Server 2022 or 2019) that you downloaded in the previous step. If it’s not listed, upload the ISO to your Proxmox server first.
+   -OS: Select the correct ISO image (Windows Server 2025) that you downloaded in the previous step. If it’s not listed, upload the ISO to your Proxmox server first.
    
    ![Screenshot 2025-01-11 at 15-25-52 pve01 - Proxmox Virtual Environment](https://github.com/user-attachments/assets/2f26e78b-bef7-4c44-bf88-9f6fea3e09bd)
 
