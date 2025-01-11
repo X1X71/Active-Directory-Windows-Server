@@ -32,12 +32,15 @@ Proxmox is a powerful open-source virtualization platform that can manage virtua
    -VM ID: Leave this as the default.
    -Name: Enter a name for your VM (e.g., Windows-Server-AD).
    -OS: Select the correct ISO image (Windows Server 2022 or 2019) that you downloaded in the previous step. If it’s not listed, upload the ISO to your Proxmox server first.
+   
+   ![Screenshot 2025-01-11 at 15-25-52 pve01 - Proxmox Virtual Environment](https://github.com/user-attachments/assets/2f26e78b-bef7-4c44-bf88-9f6fea3e09bd)
+
    -System: Leave the default settings (BIOS/UEFI, etc.).
    -Disks: Choose the disk size for your VM (at least 40 GB recommended).
    -CPU: Allocate at least 2 CPU cores for the VM.
    -Memory: Allocate at least 2 GB of RAM for the VM.
    -Network: Choose the default virtio network model.
 
-3. Start the VM:
+4. Start the VM:
 
    -Once the VM is created, select the VM from the left sidebar, click Start, and then open the Console to begin the installation process.
