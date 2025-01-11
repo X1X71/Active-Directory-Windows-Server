@@ -23,9 +23,10 @@ Proxmox is a powerful open-source virtualization platform that can manage virtua
 1. Log into Proxmox Web Interface:
 
    -Open your browser and go to https://your-proxmox-ip:8006 to access the Proxmox web interface.
+   
    -Log in with your Proxmox credentials.
 
-2. Create a New Virtual Machine:
+3. Create a New Virtual Machine:
 
    -In the Proxmox web interface, click on the Create VM button at the top right.
    
