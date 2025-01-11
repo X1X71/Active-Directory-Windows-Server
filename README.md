@@ -13,7 +13,7 @@ This guide will walk you through the process of installing and configuring Activ
 **Step 1: Download Windows Server Evaluation Version**
 
 1. Go to the [Microsoft Evaluation Center.](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2025)
-2. Choose the Windows Server version you want (usually Windows Server 2022 or Windows Server 2019).
+2. Choose the Windows Server version you want (we will be using Windows Server 2025).
 3. Download the ISO file for the evaluation version (it is typically valid for 180 days).
 4. You will need to sign up or log in with a Microsoft account to download.
 
