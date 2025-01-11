@@ -56,6 +56,7 @@ Follow the installation wizard for Windows Server:
    -Proceed with the installation and set the administrator password when prompted.
 
    -The VM will reboot several times during the installation process.
+   
 ![Screenshot 2025-01-11 at 15-35-09 pve01 - Proxmox Virtual Environment](https://github.com/user-attachments/assets/3ccfb99f-e5d5-406b-b547-20b214c13252)
 
 
@@ -73,6 +74,7 @@ Now that you have Windows Server installed, let’s install the Active Directory
    -In the Add Roles and Features Wizard, click Next until you reach the Select Features page.
    -On the Server Roles page, scroll down and check Active Directory Domain Services.
    -Click Next and then Install.
+   
 ![Screenshot 2025-01-11 at 15-48-50 pve01 - Proxmox Virtual Environment](https://github.com/user-attachments/assets/92c2f8b1-3057-48a2-8d0c-526eb48d6202)
 
    -Wait for the installation to finish.
@@ -83,6 +85,7 @@ Once the AD DS role is installed, you’ll need to promote the server to a Domai
 
    1.Promote the Server:
    -After the installation completes, you’ll see a notification in Server Manager. Click the yellow triangle icon, then click Promote this server to a domain controller.
+   
 ![Screenshot 2025-01-11 at 15-53-02 pve01 - Proxmox Virtual Environment](https://github.com/user-attachments/assets/7adc54b1-eb30-437b-931e-0055fdf308d8)
 
    2.Configure the Domain:
@@ -90,6 +93,7 @@ Once the AD DS role is installed, you’ll need to promote the server to a Domai
    -Enter a Root domain name (e.g., example.local).
    -Set a Directory Services Restore Mode (DSRM) password. This is important for domain controller recovery.
    -Click Next and proceed with the installation.
+   
 ![Screenshot 2025-01-11 at 15-53-26 pve01 - Proxmox Virtual Environment](https://github.com/user-attachments/assets/9223566f-45b3-490e-839c-0fa9caff726b)
 
    3.Reboot the Server:
@@ -103,11 +107,13 @@ After the server reboots, verify that Active Directory is functioning properly:
    -Open the Server Manager.
    -Go to Tools > Active Directory Users and Computers.
    -You should see your domain listed on the left pane (e.g., example.local).
+   
 ![Screenshot 2025-01-11 at 16-03-37 pve01 - Proxmox Virtual Environment](https://github.com/user-attachments/assets/1518ec17-952c-49ba-a041-3540b30ce649)
 
    2.Run DC Diagnostics:
    -Open Command Prompt and type dcdiag to check the health of the domain controller.
    -Ensure all tests pass without errors.
+   
 ![Screenshot 2025-01-11 at 16-04-35 pve01 - Proxmox Virtual Environment](https://github.com/user-attachments/assets/e2f2b418-4673-4cbd-b093-604273113437)
 
 **Step 7: Install and Configure DNS Server**
@@ -117,11 +123,13 @@ Active Directory relies on DNS to function correctly. Verify that the DNS role i
    1.Verify DNS Configuration:
    -Open DNS Manager from Server Manager > Tools > DNS.
    -Ensure that your Forward Lookup Zone for your domain (e.g., example.local) is set up correctly.
-   -DNSSEC status can be left "Not Signed" for now as this is a testing environment
+   -DNSSEC status can be left "Not Signed" for now as this is a testing environment.
+   
 ![Screenshot 2025-01-11 at 16-06-34 pve01 - Proxmox Virtual Environment](https://github.com/user-attachments/assets/45ce5a77-9dd6-43d9-b647-df989074323e)
 
    2.Test DNS Resolution:
    -Open Command Prompt and type nslookup example.local to ensure the domain name resolves correctly.
+   
 ![Screenshot 2025-01-11 at 16-11-20 pve01 - Proxmox Virtual Environment](https://github.com/user-attachments/assets/3b94b815-9354-48a9-b5ca-64aa10119dd8)
 
 **Step 8: Create Users and Groups in Active Directory**
@@ -131,12 +139,14 @@ Now, let’s create some users and groups in Active Directory:
    1.Create Organizational Units (OUs):
    -In Active Directory Users and Computers, right-click your domain (example.local) and select New > Organizational Unit (OU).
    -Enter the name for your OU (e.g., HR, IT).
+   
 ![Screenshot 2025-01-11 at 16-13-04 pve01 - Proxmox Virtual Environment](https://github.com/user-attachments/assets/aad3085d-4c99-4f07-ac6c-64bdb06396da)
 
    2.Create Users:
    -Right-click on an OU or the Users folder, then select New > User.
    -Enter the user’s details (e.g., first name, last name, username).
    -Set a password for the user.
+   
 ![Screenshot 2025-01-11 at 16-14-17 pve01 - Proxmox Virtual Environment](https://github.com/user-attachments/assets/7f3d30c0-73f7-46e4-97d5-74b1b7f3695a)
 
    3.Create Groups:
@@ -152,6 +162,7 @@ If you want to manage your Active Directory remotely, you’ll need to install R
 ```
 Get-WindowsCapability -Name RSAT* -Online | Add-WindowsCapability -Online
 ```
+
 ![Screenshot 2025-01-11 at 16-19-58 pve01 - Proxmox Virtual Environment](https://github.com/user-attachments/assets/22043b1c-b602-40f9-96c1-c290c0dc4d51)
 
    4.Confirm installation by searching "Active Directory Users and Computers" in the Start Menu
