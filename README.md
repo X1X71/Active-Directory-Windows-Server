@@ -8,7 +8,6 @@ This guide will walk you through the process of installing and configuring Activ
 
 -A Proxmox host (local or remote) 
 
--Basic knowledge of Proxmox and Windows Server.
 
 **Step 1: Download Windows Server Evaluation Version**
 
