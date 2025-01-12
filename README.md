@@ -1,6 +1,6 @@
-# How to install and configure Active Directory (AD) on Windows Server 2025 (Evaluation Version) using a Proxmox virtual machine 
+# How to install and configure Active Directory on Windows Server 2025 (Evaluation Version) using a Proxmox virtual machine 
 
-This guide will walk you through the process of installing and configuring Active Directory (AD) on a Windows Server machine using the evaluation version and running it as a virtual machine in Proxmox. This setup allows you to test and experiment with Active Directory features without needing a paid license. It can be done on a physical or virtual machine.
+This guide will walk you through the process of installing and configuring Active Directory on a Windows Server machine using the evaluation version and running it as a virtual machine in Proxmox. This setup allows you to test and experiment with Active Directory features without needing a paid license. It can be done on a physical or virtual machine.
 
 **Prerequisites**
 
